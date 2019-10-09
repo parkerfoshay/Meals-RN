@@ -7,7 +7,7 @@ import { CATEGORIES } from "../data/dummy-data";
 
 const CategoriesScreen = ({ navigation: { navigate } }) => {
     const renderGridItem = itemData => {
-        return <GridItem items={itemData} navigation={navigate}/>;
+        return <GridItem items={itemData} navigation={navigate} color={itemData.item.color}/>;
       };
   return (
     <FlatList
