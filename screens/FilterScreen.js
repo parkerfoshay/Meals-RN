@@ -9,6 +9,22 @@ const FilterScreen = () => {
     )
 }
 
+FilterScreen.navigationOptions = navData => {
+    return {
+      headerTitle: "Filters",
+      headerLeft: (
+        <HeaderButtons HeaderButtonComponent={HeaderButton}>
+          <Item
+            title="Menu"
+            iconName="ios-menu"
+            onPress={() => {
+              navData.navigation.toggleDrawer();
+            }}
+          />
+        </HeaderButtons>
+      )
+    };
+  };
 
 const styles = StyleSheet.create({
     screen: {
